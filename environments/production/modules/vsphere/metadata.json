@@ -1,0 +1,64 @@
+{
+  "name": "puppetlabs-vsphere",
+  "version": "1.2.2",
+  "author": "Puppet Labs",
+  "summary": "Create and manage machines running on VMWare vSphere with Puppet",
+  "license": "PuppetLabs-Enterprise",
+  "source": "https://github.com/puppetlabs/puppetlabs-vsphere",
+  "project_page": "https://forge.puppetlabs.com/puppetlabs/vsphere",
+  "issues_url": "https://tickets.puppetlabs.com/browse/MODULES",
+  "data_provider": null,
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "OracleLinux",
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "Scientific",
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "14.04"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">=3.7.2 < 5.0.0"
+    }
+  ],
+  "dependencies": [
+  
+  ]
+}

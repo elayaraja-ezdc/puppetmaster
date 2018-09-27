@@ -1,0 +1,16 @@
+{
+  "name": "puppetlabs-dism",
+  "version": "1.2.0",
+  "author": "puppetlabs",
+  "summary": "Provides a DISM puppet resource type on Windows.",
+  "license": "Apache License, Version 2.0",
+  "source": "https://github.com/puppetlabs/puppetlabs-dism",
+  "project_page": "https://github.com/puppetlabs/puppetlabs-dism",
+  "issues_url": "https://tickets.puppetlabs.com/browse/MODULES",
+  "dependencies": [
+  
+  ],
+  "types": [
+  
+  ]
+}
