@@ -30,21 +30,21 @@ exec { 'Wait for custom spec configuration':
   path => "/usr/bin:/bin",
   timeout => 0,
 }
-
-sqlserver_instance{ 'MSSQLSERVER':
-  source                  => 'C:/Sqlserver/Setup/SQL_Server_2016/',
-  sa_pwd                  => 'VMware1!',
-  sql_sysadmin_accounts   => ['Administrator'],
-  install_switches        => {
-    'TCPENABLED'          => 1,
-    'SQLBACKUPDIR'        => 'C:\\MSSQLSERVER\\backupdir',
-    'SQLTEMPDBDIR'        => 'C:\\MSSQLSERVER\\tempdbdir',
-    'INSTALLSQLDATADIR'   => 'C:\\MSSQLSERVER\\datadir',
-    'INSTANCEDIR'         => 'C:\\Program Files\\Microsoft SQL Server',
-    'INSTALLSHAREDDIR'    => 'C:\\Program Files\\Microsoft SQL Server',
-    'INSTALLSHAREDWOWDIR' => 'C:\\Program Files (x86)\\Microsoft SQL Server',
-  }
-}
+notice("The value is: ------------------------------------- testing")
+# sqlserver_instance{ 'MSSQLSERVER':
+#   source                  => 'C:/Sqlserver/Setup/SQL_Server_2016/',
+#   sa_pwd                  => 'VMware1!',
+#   sql_sysadmin_accounts   => ['Administrator'],
+#   install_switches        => {
+#     'TCPENABLED'          => 1,
+#     'SQLBACKUPDIR'        => 'C:\\MSSQLSERVER\\backupdir',
+#     'SQLTEMPDBDIR'        => 'C:\\MSSQLSERVER\\tempdbdir',
+#     'INSTALLSQLDATADIR'   => 'C:\\MSSQLSERVER\\datadir',
+#     'INSTANCEDIR'         => 'C:\\Program Files\\Microsoft SQL Server',
+#     'INSTALLSHAREDDIR'    => 'C:\\Program Files\\Microsoft SQL Server',
+#     'INSTALLSHAREDWOWDIR' => 'C:\\Program Files (x86)\\Microsoft SQL Server',
+#   }
+# }
 
 #$source = '\\192.168.20.141\ViewNAS-ISO\ISO\SQL Server\SQL2016\Setup\'
 
