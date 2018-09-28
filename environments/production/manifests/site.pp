@@ -18,7 +18,7 @@ package { 'hocon':
 
 
 # VM Provision from template or machine in resource pool network
-#vsphere_vm { '/HQ-DATACENTER/vm/PuppetServer/agent-2':
+#vsphere_vm { '/HQ-DATACENTER/vm/PuppetServer/agent-3':
 #  ensure => running,
 #  resource_pool => '/ArkV-Developer/PuppetVM',
 #  customization_spec => 'PuppetVM-Windows2016',
@@ -31,11 +31,19 @@ exec { 'Wait for custom spec configuration':
   timeout => 0,
 }
 
+sqlserver_instance{ 'MSSQLSERVER':
+  source                  => 'C:/Sqlserver/Setup/SQL_Server_2016/',
+  sa_pwd                  => 'VMware1!',
+  sql_sysadmin_accounts   => ['Administrator'],
+}
+
+#$source = '\\192.168.20.141\ViewNAS-ISO\ISO\SQL Server\SQL2016\Setup\'
 
 node default {
   # This is where you can declare classes for all nodes.
   # Example:
   #   class { 'my_class': }
+ 
 }
 
 node 'agent-1.arklab.local' {
@@ -43,5 +51,5 @@ node 'agent-1.arklab.local' {
 }
 
 node 'agent-2.arklab.local' {
- include 'mssqlserver'
+ #include 'mssqlserver'
 }
