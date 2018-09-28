@@ -18,15 +18,15 @@ package { 'hocon':
 
 
 # VM Provision from template or machine in resource pool network
-#vsphere_vm { '/HQ-DATACENTER/vm/PuppetServer/agent-3':
-#  ensure => running,
-#  resource_pool => '/ArkV-Developer/PuppetVM',
-#  customization_spec => 'PuppetVM-Windows2016',
-#  source => '/HQ-DATACENTER/vm/ArkV-Employees Folders/Kumar/Kur-win2016',
-#}
+vsphere_vm { '/HQ-DATACENTER/vm/PuppetServer/puppetagent-1':
+ ensure => running,
+ resource_pool => '/ArkV-Developer/PuppetVM',
+ customization_spec => 'PuppetVM-Windows2016',
+ source => '/HQ-DATACENTER/vm/ArkV-Employees Folders/Kumar/Kur-win2016',
+}
 
 exec { 'Wait for custom spec configuration':
-  command => "sleep 1",
+  command => "sleep 1800",
   path => "/usr/bin:/bin",
   timeout => 0,
 }
@@ -55,10 +55,7 @@ node default {
  
 }
 
-node 'agent-1.arklab.local' {
-  include 'mssqlserver'
-}
+# node 'agent-1.arklab.local' {
+#   include 'mssqlserver'
+# }
 
-node 'agent-2.arklab.local' {
- #include 'mssqlserver'
-}
