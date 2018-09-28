@@ -23,7 +23,9 @@
 #   }
 #
 define sqlserver::config (
-  Optional[String] $admin_user = '.\administrator',
+  notice("The value is: ------------------------------------- config")
+  notice("The value is: ------------------------------------- '${title}'")
+  Optional[String] $admin_user = 'Administrator',
   Optional[String] $admin_pass = 'VMware1!',
   Enum['SQL_LOGIN', 'WINDOWS_LOGIN'] $admin_login_type = 'SQL_LOGIN',
   String[1,16] $instance_name = $title,
@@ -33,6 +35,7 @@ define sqlserver::config (
 
   case $admin_login_type {
     'SQL_LOGIN': {
+      notice("The value is: ------------------------------------- sql login")
       if ($admin_user == '') { fail 'sqlserver::config expects admin_user to be set for a admin_login_type of SQL_LOGIN' }
       if ($admin_pass == '') { fail 'sqlserver::config expects admin_pass to be set for a admin_login_type of SQL_LOGIN' }
     }

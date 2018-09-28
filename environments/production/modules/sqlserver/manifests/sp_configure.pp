@@ -35,7 +35,7 @@ define sqlserver::sp_configure (
   Boolean $restart = false,
 ){
   sqlserver_validate_instance_name($instance)
-
+   notice("The value is: ------------------------------------- sp configure")
   $service_name = $instance ? {
     'MSSQLSERVER' => 'MSSQLSERVER',
     default => "MSSQL\$${instance}"

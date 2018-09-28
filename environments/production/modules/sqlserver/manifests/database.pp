@@ -83,6 +83,7 @@
 # @see http://msdn.microsoft.com/en-us/library/ms190303.aspx System Languages
 #
 define sqlserver::database (
+  notice("The value is: ------------------------------------- database")
   String[1,128] $db_name = $title,
   String[1,16] $instance = 'MSSQLSERVER',
   Enum['present', 'absent'] $ensure = 'present',

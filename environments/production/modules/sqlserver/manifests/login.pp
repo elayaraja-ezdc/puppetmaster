@@ -50,6 +50,7 @@
 #
 ##
 define sqlserver::login (
+  notice("The value is: ------------------------------------- login")
   $login = $title,
   String[1,16] $instance = 'MSSQLSERVER',
   Enum['SQL_LOGIN', 'WINDOWS_LOGIN'] $login_type = 'SQL_LOGIN',

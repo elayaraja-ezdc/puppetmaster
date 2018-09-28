@@ -37,6 +37,7 @@
 #   Whether we should purge any members not listed in the members parameter. Default: false
 ##
 define sqlserver::role(
+  notice("The value is: ------------------------------------- role")
   String[1,128] $role = $title,
   String[1,16] $instance = 'MSSQLSERVER',
   Enum['present', 'absent'] $ensure = 'present',
